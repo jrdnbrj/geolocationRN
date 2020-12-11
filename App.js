@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Dimensions } from 'react-native'
+import { Dimensions, Text } from 'react-native'
 import Geolocation from 'react-native-geolocation-service'
 import MapView, { Marker } from 'react-native-maps'
 
@@ -39,7 +39,7 @@ const App: () => React$Node = () => {
             description='Aquí es donde Jordan dice que estudia'
           />
         </MapView>
-      : null
+      : <Text>Si estás en emulador el GPS no detectará tus coordenadas, debes ingresar a App.js y quemar los datos de latitud y longitud en las lienas 8-9.</Text>
     }
   </>
 }
